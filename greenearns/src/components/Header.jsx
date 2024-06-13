@@ -18,13 +18,13 @@ const Navbar = () => {
                     <img src={logo} alt="logo" />
 
                     <ul className="flex m-auto gap-16 ">
-                        <li className="hidden md:inline-block text-[#331000] font-serif hover:text-[#015C28]">
+                        <li className="hidden md:inline-block text-[#331000] font-serif hover:text-[#015C28] cursor-grab ">
                             Home
                         </li>
-                        <li className="hidden md:inline-block text-[#331000] font-serif hover:text-[#015C28]">
+                        <li className="hidden md:inline-block text-[#331000] font-serif hover:text-[#015C28] cursor-grab ">
                             Marketplace
                         </li>
-                        <li className="hidden md:inline-block  text-[#331000] font-serif hover:text-[#015C28]">
+                        <li className="hidden md:inline-block  text-[#331000] font-serif hover:text-[#015C28] cursor-grab ">
                             About us
                         </li>
                     </ul>
@@ -72,8 +72,8 @@ const Navbar = () => {
                                 </li>
                                 <li>
                                     <Link
-                                        to="/marketplace"
-                                        class="block py-2 px-3 text-[#0F160F] rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#331000] md:p-0 dark:text-white md:dark:hover:text-[#331000] dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                                        to="/market-place"
+                                        class="block py-2 px-3 text-[#0F160F] rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#331000] md:p-0 dark:text-white md:dark:hover:text-[#331000] dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent cursor-grab "
                                     >
                                         Marketplace
                                     </Link>
