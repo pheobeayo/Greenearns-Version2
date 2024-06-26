@@ -3,6 +3,7 @@
 const AddProduct = () => {
   return (
     <div>
+      
     </div>
   );
 };

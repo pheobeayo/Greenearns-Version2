@@ -10,9 +10,9 @@ const DashboardLayout = () => {
       
         
         
-        <div className="flex justify-between bg-[#DBECDB]">
+        <div className="flex bg-white">
             <Sidebar />
-            <div className="px-6 w-[100%] lg:w-[72%] md:w-[72%] h-auto lg:h-[80vh] md:h-[80vh] overflow-y-scroll mt-28">
+            <div className="px-6 w-[100%] lg:w-[72%] md:w-[72%] h-auto lg:h-[100vh] md:h-[80vh] overflow-y-scroll mt-28">
             <Outlet />
             </div>
         </div>

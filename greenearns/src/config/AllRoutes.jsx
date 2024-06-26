@@ -13,7 +13,7 @@ import PageLoader from "../components/Loader/PageLoader";
 const Home = lazy(() => import("../pages/Home"));
 const Aboutus = lazy(() => import("../pages/About-us"));
 const DashboardLayout = lazy(() => import("../layout/DashboardLayout"));
-const User = lazy(() => import("../pages/dashboard/User"));
+const Dashboard = lazy(() => import("../pages/dashboard/Dashboard"));
 const AddProduct = lazy(() => import("../pages/dashboard/AddProduct"));
 const Marketplace = lazy(() => import("../pages/dashboard/Marketplace"));
 const Chat = lazy(() => import("../pages/dashboard/Chat"));
@@ -30,7 +30,7 @@ const router = createBrowserRouter(createRoutesFromElements(
       <Route path="/about-us" element={<Aboutus />} />
     </Route>
     <Route path="/dashboard" element={<DashboardLayout />} >
-      <Route index element={<User />} />
+      <Route index element={<Dashboard />} />
       <Route path="add_product" element={<AddProduct />} />
       <Route path="market_place" element={<Marketplace />} />
       <Route path="chat" element={<Chat />} />

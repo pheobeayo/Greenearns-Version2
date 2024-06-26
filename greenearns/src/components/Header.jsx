@@ -18,13 +18,13 @@ const Navbar = () => {
                     <img src={logo} alt="logo" />
 
                     <div className="flex m-auto gap-16 ">
-                        <NavLink to='/' className="hidden md:inNavLinkne-block text-[#331000] font-serif hover:text-[#015C28] cursor-grab ">
+                        <NavLink to='/' className=" md:inNavLinkne-block text-[#331000] font-serif hover:text-[#015C28] cursor-grab ">
                             Home
                         </NavLink>
-                        <NavLink to='/market-place' className="hidden md:inNavLinkne-block text-[#331000] font-serif hover:text-[#015C28] cursor-grab ">
+                        <NavLink to='/market-place' className=" md:inNavLinkne-block text-[#331000] font-serif hover:text-[#015C28] cursor-grab ">
                             Marketplace
                         </NavLink>
-                        <NavLink to='/about-us' className="hidden md:inNavLinkne-block  text-[#331000] font-serif hover:text-[#015C28] cursor-grab ">
+                        <NavLink to='/about-us' className=" md:inNavLinkne-block  text-[#331000] font-serif hover:text-[#015C28] cursor-grab ">
                             About us
                         </NavLink>
                     </div>

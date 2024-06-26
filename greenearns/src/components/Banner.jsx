@@ -1,5 +1,4 @@
-import React from 'react'
-import bannerImg from '../assets/ecobg.svg'
+import bannerImg from '../assets/dashboard.svg'
 import AddProduct from './AddProduct'
 
 const Banner = () => {
@@ -12,8 +11,8 @@ const Banner = () => {
             <AddProduct />
             </div>
         </div>
-        <div className='lg:w-[40%] md:w-[40%] w-[100%] bg-[#DBECDB] rounded-tl-[50%] rounded-bl-[50%] text-right rounded-tr-[20px] rounded-br-[20px] p-6 flex justify-center'>
-            <img src={bannerImg} alt="" />
+        <div className='lg:w-[40%] md:w-[40%] w-[100%] bg-[#DBECDB] rounded-tl-[50%] rounded-bl-[50%] text-right rounded-tr-[20px] rounded-br-[20px] p-6 flex justify-center border border-[#0F160F]'>
+            <img src={bannerImg} alt="dashboard" />
         </div>
     </div>
   )

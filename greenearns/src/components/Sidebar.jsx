@@ -10,14 +10,14 @@ import logo from '../assets/logo.svg';
 
 const Sidebar = () =>  {
   const activeStyle = {
-    borderLeft: '1px solid #DBECDB',
-    borderRight: '1px solid #DBECDB',
+    borderLeft: '1px solid #2A382A',
+    borderRight: '1px solid #2A382A',
     width: '100%',
     padding: '20px'
   };
 
   return (
-    <div className='bg-[#DBECDB] w-[100%] text-[rgb(15,22,15)] p-8 py-12 h-[100vh]'>
+    <div className='bg-[#DBECDB] w-[20%] text-[rgb(15,22,15)] p-8 py-12 h-[100vh]'>
       <img src={logo} alt='logo'/>
       <NavLink to="/dashboard" className="text-[14px] text-[#0F160F] flex items-center py-4 mb-4 px-4 hover:text-[#015C28]" style={({isActive}) => isActive ? activeStyle : null } end><CgHomeAlt className="mr-4" />Dashboard</NavLink>
       <NavLink to="chat" className="text-[14px] text-[#0F160F]  flex items-center py-4 mb-4 px-6  hover:text-[#015C28]" style={({isActive}) => isActive ? activeStyle : null }><BiBox className="mr-4" /> Chat</NavLink>
