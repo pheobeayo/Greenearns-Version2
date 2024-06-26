@@ -17,17 +17,17 @@ const Navbar = () => {
                 <div className="flex gap-2 justify-center items-center px-10 pt-8 pr-10">
                     <img src={logo} alt="logo" />
 
-                    <ul className="flex m-auto gap-16 ">
-                        <li className="hidden md:inline-block text-[#331000] font-serif hover:text-[#015C28] cursor-grab ">
+                    <div className="flex m-auto gap-16 ">
+                        <NavLink to='/' className="hidden md:inNavLinkne-block text-[#331000] font-serif hover:text-[#015C28] cursor-grab ">
                             Home
-                        </li>
-                        <li className="hidden md:inline-block text-[#331000] font-serif hover:text-[#015C28] cursor-grab ">
+                        </NavLink>
+                        <NavLink to='/market-place' className="hidden md:inNavLinkne-block text-[#331000] font-serif hover:text-[#015C28] cursor-grab ">
                             Marketplace
-                        </li>
-                        <li className="hidden md:inline-block  text-[#331000] font-serif hover:text-[#015C28] cursor-grab ">
+                        </NavLink>
+                        <NavLink to='/about-us' className="hidden md:inNavLinkne-block  text-[#331000] font-serif hover:text-[#015C28] cursor-grab ">
                             About us
-                        </li>
-                    </ul>
+                        </NavLink>
+                    </div>
 
                     <w3m-button />
 
