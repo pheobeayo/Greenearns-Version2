@@ -1,7 +1,7 @@
 import UseGetAllProduct from '../Hooks/UseGetAllProduct'
 import { formatUnits } from 'ethers';
 import { Link } from 'react-router-dom';
-import React, { useEffect, useState } from 'react';
+import  { useEffect, useState } from 'react';
 import LoadingSpinner from '../components/Loader/LoadingSpinner';
 
 const MarketplaceHome = () => {
@@ -28,7 +28,7 @@ const MarketplaceHome = () => {
             <img src={info.image} alt="" className='w-[100%] h-[237px] object-cover object-center rounded-lg'/>
             <h3 className='font-bold mt-4 lg:text-[20px] md:text-[20px] text-[18px] capitalise font-titiliumweb'>{info.name}</h3>
             <p className='flex justify-between my-4'>Quantity <span>{Number(info.weight)}</span></p>
-            <p className='flex justify-between my-4'>Seller's location <span>{info.location}</span></p>
+            <p className='flex justify-between my-4'>Seller &apos;s location <span>{info.location}</span></p>
             <p className='flex justify-between my-4 font-bold'>Price <span>{convertToWholeNumber(formatUnits(info.price))}MTR</span> </p>
             <button className='my-4 border w-[100%] py-2 px-4 border-[#427142] bg-white text-[#427142] rounded-lg'>View  details</button>
             </Link>

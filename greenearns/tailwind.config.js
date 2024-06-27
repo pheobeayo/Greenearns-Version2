@@ -7,6 +7,7 @@ export default {
         'opensans': ["Open Sans"," sans-serif"],
         'titiliumweb': ["Titillium Web"," sans-serif"]
       },
+      
     },
   },
   screens: {
