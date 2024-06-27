@@ -1,10 +1,9 @@
+import ProductCard from '../../components/ProductCard'
 
 const Marketplace = () => {
     return (
       <main className="bg-white">
-         <div className="flex flex-col lg:flex-row md:flex-row justify-between">
-          
-         </div>
+          <ProductCard />
       </main>
     );
   };

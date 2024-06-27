@@ -5,14 +5,12 @@ import Subfooter from "../components/Subfooter";
 
 const Aboutus = () => {
     return (
-        <main className="bg-white h-screen">
-            <Navbar />
+        <main className="bg-white">
+
             <section className="w-[100vw]  bg-white">
                 <div className="mt-28">
                 <About />
                 </div>
-                <Subfooter />
-                <Footer />
             </section>
         </main>
     );
