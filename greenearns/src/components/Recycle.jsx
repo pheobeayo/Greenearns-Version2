@@ -1,10 +1,9 @@
 import recycle from "../assets/recycle.svg"
-
+import UseGetAllProduct from '../Hooks/UseGetAllProduct'
+import { formatUnits } from 'ethers';
 
 const Recycle = () => {
-
-
-
+const allProduct = UseGetAllProduct()
 
     return (
         <div className="bg-white">
@@ -12,42 +11,16 @@ const Recycle = () => {
                 <h2 className="text-[#427142] text-3xl font-bold leading-10">
                     Recyclable materials for sale (Prices are in Unit of Measure)
                 </h2>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8">
-
-                    <div className="content-card mb-5  hover:skew-x-12  
-              duration-150 ease-in-out">
-                        <img
-                            src={recycle}
-                            alt="recycle"
-                            className="object-cover h-48 w-full rounded-t-lg"
-                        />
-                        <div className="bg-white rounded-b-lg p-4 shadow-md">
-                            <h3 className="font-bold text-[#0F160F] text-sm mb-2">
-                                Plastic Bottles Collection
-                            </h3>
-                            <p className="font-normal text-justify text-[#331000] text-xs mb-4">
-
-                            </p>
-                            <div className="flex justify-between items-center">
-                                <div>
-                                    <h1 className="text-[#0F160F] text-xs">
-                                        Seller Location:
-                                    </h1>
-                                    <h1 className="text-[#0F160F] text-xs"></h1>
-                                </div>
-                                
-                            </div>
-                            <div className="block mt-4">
-                                <button className="bg-[#ffffff] hover:bg-[#427142] text-[#427142] font-bold py-2 px-4 border border-[#427142] rounded w-full"
-
-                                >
-                                    View details
-                                </button>
-                            </div>
+                            <div className='flex lg:flex-row md:flex-row flex-col justify-between items-center py-12'>
+                        {allProduct.map((info) => ( <div className='lg:w-[32%] md:w-[32%] w-[100%] p-4 border text-black border-[#0F160F]/20 rounded-lg mb-4' key={info.id}>
+                                <img src={info.image} alt="" className='w-[100%] h-[237px] object-cover object-center rounded-lg'/>
+                                <h3 className='font-bold mt-4 lg:text-[20px] md:text-[20px] text-[18px] capitalise'>{info.name}</h3>
+                                <p className='flex justify-between my-4'>Quantity <span>{Number(info.weight)}</span></p>
+                                <p className='flex justify-between my-4'>Seller's location <span>{info.location}</span></p>
+                                <p className='flex justify-between my-4 font-bold'>Price <span>{formatUnits(info.price)}</span> </p>
+                                <button className='my-4 border w-[100%] py-2 px-4 border-[#427142] bg-white text-[#427142] rounded-lg'>View  details</button>
+                            </div>))}
                         </div>
-                    </div>
-
-                </div>
             </div>
         </div>
     );
