@@ -13,18 +13,18 @@ const Navbar = () => {
 
     return (
         <nav className="bg-white">
-            <div className="fixed top-0 right-0 left-0 bg-gradient z-40 bg-white p-2 border-y ">
+            <div className="sticky top-0  z-40 bg-white p-2 border-y ">
                 <div className="flex gap-2 justify-center items-center px-10 pt-8 pr-10">
                     <img src={logo} alt="logo" />
 
                     <div className="flex m-auto gap-16 ">
-                        <NavLink to='/' className=" md:inNavLinkne-block text-[#331000] font-serif hover:text-[#015C28] cursor-grab ">
+                        <NavLink to='/' className="hidden lg:flex md:inNavLinkne-block text-[#331000] font-serif hover:text-[#015C28] cursor-grab ">
                             Home
                         </NavLink>
-                        <NavLink to='/market-place' className=" md:inNavLinkne-block text-[#331000] font-serif hover:text-[#015C28] cursor-grab ">
+                        <NavLink to='/marketplace' className="hidden lg:flex md:inNavLinkne-block text-[#331000] font-serif hover:text-[#015C28] cursor-grab ">
                             Marketplace
                         </NavLink>
-                        <NavLink to='/about-us' className=" md:inNavLinkne-block  text-[#331000] font-serif hover:text-[#015C28] cursor-grab ">
+                        <NavLink to='/about-us' className="hidden lg:flex md:inNavLinkne-block  text-[#331000] font-serif hover:text-[#015C28] cursor-grab ">
                             About us
                         </NavLink>
                     </div>
