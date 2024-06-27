@@ -1,15 +1,14 @@
 import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
-import UseGetAllProduct from '../Hooks/UseGetAllProduct'
-import LoadingSpinner from '../components/Loader/LoadingSpinner'
+import UseGetAllProduct from '../../Hooks/UseGetAllProduct'
+import LoadingSpinner from '../../components/Loader/LoadingSpinner'
 import { formatUnits } from 'ethers';
-import { IoClose } from "react-icons/io5";
+import Banner from '../../components/Banner';
 
-const MarketplaceHomeDetails = () => {
+const MarketplaceDetails = () => {
     const { id } = useParams()
     const allProduct = UseGetAllProduct()
     const [transaction, setTransaction] = useState(null);
-    const [showModal, setShowModal] = useState(false)
     
     useEffect(() => {
         if (allProduct.length > 0) {
@@ -30,17 +29,12 @@ const MarketplaceHomeDetails = () => {
     return `${start}...`;
     };
 
-    const handleShowModal = () => {
-        setShowModal(true);
-     };
 
-     const handleCloseModal = () => {
-        setShowModal(false);
-     };
 
   return (
     <main>
-       { transaction ? ( <div className='w-[95%] mx-auto p-8'>
+        <Banner />
+       { transaction ? ( <div className='w-[100%] mx-auto p-8'>
         <h2 className='lg:text-[28px] md:text-[28px] text-[18px] text-[#0F160F] font-bold mb-2 font-titiliumweb'>Product Details</h2>
        <section className='flex lg:flex-row md:flex-row flex-col justify-between'>
         <div className='lg:w-[45%] md:w-[45%] w-[100%]'>
@@ -52,24 +46,16 @@ const MarketplaceHomeDetails = () => {
             <p className='flex justify-between my-4'>Quantity available: <span>{Number(transaction.weight)}</span></p>
             <p className='flex justify-between my-4'>Seller's location: <span>{transaction.location}</span></p>
             <p className='flex justify-between my-4'>Seller's wallet address: <span>{truncateAddress(transaction.address)}</span></p>
-            <button className='bg-[#015C28] w-[100%] py-2 text-white mb-4' onClick={handleShowModal}>Edit information</button>
-            <button className='bg-white w-[100%] py-2 text-[#015C28] border border-[#015C28] mb-4' onClick={handleShowModal}>Add Comment</button>
+            <button className='bg-[#015C28] w-[100%] py-2 text-white mb-4'>Edit information</button>
+            <button className='bg-white w-[100%] py-2 text-[#015C28] border border-[#015C28] mb-4'>Add Comment</button>
             <p>Kindly drop a comment upon receipt of your products. This is crucial to ensure the seller receives their payment promptly. <a href="#" className='text-[#015C28] font-bold'>Learn More</a></p>
             </div>
             </section></div>) : (<div>
             <LoadingSpinner />
         </div>)} 
-        {showModal && (
-           <div className='fixed inset-0 flex items-center justify-center bg-black bg-opacity-75'>
-           <div className='bg-white p-8 rounded-lg text-[#0F160F] flex flex-col items-center'>
-            <IoClose  className='self-end mb-4 font-bold text-2xl' onClick={handleCloseModal} />
-             <p className='mb-4'>Kindly connect your wallet to proceed</p>
-             <w3m-button />
-       </div>         
-         </div>
-        )}
+      
     </main>
   )
 }
 
-export default MarketplaceHomeDetails
+export default MarketplaceDetails
