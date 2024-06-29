@@ -9,9 +9,9 @@ function Footer() {
 
     <div
       className="w-[100vw] px-[30px] md:px-[10px] py-[60px]
-    bg-[#2A382A] grid grid-cols-1 md:flex md:flex-row gap-4"
+    bg-[#2A382A] grid grid-cols-1 md:flex md:flex-row gap-4 "
     >
-      <div className="md:flex flex-wrap md:flex-row justify-between w-full">
+      <div className="md:flex flex-wrap md:flex-row justify-between w-full p-10">
         <div className="md:flex justify-center items-start md:gap-[100px]">
           <div className="flex flex-row gap-[100px]">
             <p className="text-gray-50 text-[10px] md:text-[15px] font-semibold">
