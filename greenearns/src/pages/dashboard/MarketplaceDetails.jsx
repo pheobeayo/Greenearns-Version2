@@ -29,8 +29,6 @@ const MarketplaceDetails = () => {
     return `${start}...`;
     };
 
-
-
   return (
     <main>
         <Banner />

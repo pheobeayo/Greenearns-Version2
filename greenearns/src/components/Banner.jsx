@@ -1,4 +1,4 @@
-import bannerImg from '../assets/dashboard.svg'
+import bannerImg from '../assets/product.png'
 import AddProduct from './AddProduct'
 
 const Banner = () => {
@@ -12,7 +12,7 @@ const Banner = () => {
             </div>
         </div>
         <div className='lg:w-[40%] md:w-[40%] w-[100%] bg-[#DBECDB] rounded-tl-[50%] rounded-bl-[50%] text-right rounded-tr-[20px] rounded-br-[20px] p-6 flex justify-center'>
-            <img src={bannerImg} alt="dashboard" />
+            <img src={bannerImg} alt="dashboard" className='w-[100%] lg:w-[60%] md:w-[60%]' />
         </div>
     </div>
   )
