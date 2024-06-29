@@ -21,7 +21,7 @@ const Sidebar = () =>  {
       <img src={logo} alt='logo'/>
       <NavLink to="/dashboard" className="text-[14px] text-[#0F160F] flex items-center py-4 mb-4 px-4 hover:text-[#015C28]" style={({isActive}) => isActive ? activeStyle : null } end><CgHomeAlt className="mr-4" />Dashboard</NavLink>
       <NavLink to="chat" className="text-[14px] text-[#0F160F]  flex items-center py-4 mb-4 px-6  hover:text-[#015C28]" style={({isActive}) => isActive ? activeStyle : null }><BiBox className="mr-4" /> Chat</NavLink>
-      <NavLink to="add_product" className="text-[14px] text-[#0F160F]  flex items-center py-4 mb-4 px-6  hover:text-[#015C28]" style={({isActive}) => isActive ? activeStyle : null }><IoIosAddCircleOutline  className="mr-4" /> Add Product</NavLink>
+      <NavLink to="createprofile" className="text-[14px] text-[#0F160F]  flex items-center py-4 mb-4 px-6  hover:text-[#015C28]" style={({isActive}) => isActive ? activeStyle : null }><IoIosAddCircleOutline  className="mr-4" />Create Profile</NavLink>
       <NavLink to="market_place" className="text-[14px] text-[#0F160F]  flex items-center py-4 mb-4 px-6  hover:text-[#015C28]" style={({isActive}) => isActive ? activeStyle : null }><ImCart className="mr-4" /> Marketplace</NavLink>
       <NavLink to="notifications" className="text-[14px] text-[#0F160F]  flex items-center py-4 mb-4 px-6  hover:text-[#015C28]" style={({isActive}) => isActive ? activeStyle : null }><BsBell className="mr-4" /> Notifications</NavLink>
       <NavLink to="transactions" className="text-[14px] text-[#0F160F]  flex items-center py-4 mb-4 px-6  hover:text-[#015C28]" style={({isActive}) => isActive ? activeStyle : null }><BsReceipt className="mr-4" /> Transactions</NavLink>

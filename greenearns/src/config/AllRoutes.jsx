@@ -14,7 +14,7 @@ const Home = lazy(() => import("../pages/Home"));
 const Aboutus = lazy(() => import("../pages/About-us"));
 const DashboardLayout = lazy(() => import("../layout/DashboardLayout"));
 const Dashboard = lazy(() => import("../pages/dashboard/Dashboard"));
-const AddProduct = lazy(() => import("../pages/dashboard/AddProduct"));
+const CreateSellerProfile = lazy(() => import("../pages/dashboard/CreateSellerProfile"));
 const Marketplace = lazy(() => import("../pages/dashboard/Marketplace"));
 const Chat = lazy(() => import("../pages/dashboard/Chat"));
 const Transactions = lazy(() => import("../pages/dashboard/Transactions"));
@@ -35,7 +35,7 @@ const router = createBrowserRouter(createRoutesFromElements(
     </Route>
     <Route path="/dashboard" element={<DashboardLayout />} >
       <Route index element={<Dashboard />} />
-      <Route path="add_product" element={<AddProduct />} />
+      <Route path="createprofile" element={<CreateSellerProfile />} />
       <Route path="market_place" element={<Marketplace />} />
       <Route path="market_place/:id" element={<MarketplaceDetails/>} />
       <Route path="chat" element={<Chat />} />
