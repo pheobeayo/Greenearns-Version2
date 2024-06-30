@@ -25,12 +25,13 @@ const style = {
     p: 4,
   };
 
-const BuyProduct = ({id, amount}) => {
-    console.log(id, amount)
+const BuyProduct = ({id, price}) => {
+    console.log(id, price)
     const [open, setOpen] = useState(false);
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
-    const { chainId } = useWeb3ModalAccount();
+    const [amount, setAmount] = useState(0)
+    const { chainId, address } = useWeb3ModalAccount();
     const { walletProvider } = useWeb3ModalProvider()
 
  
@@ -40,25 +41,26 @@ const BuyProduct = ({id, amount}) => {
       const signer = await readWriteProvider.getSigner();
   
       const contract = getGreenEarnContract(signer);
-  
+
+      const total = ethers.parseUnits(price.toString(), 18) * BigInt(amount)
+ 
       try {
-        // const _price = amount.toString();
-        // const approveTx = await getGreenTokenContract.approve(
-        //     import.meta.env.VITE_GREENEARN_ADDRESS,
-        //     ethers.parseUnits(_price, 18)
-        //   );
-        //   const approveReceipt = await approveTx.wait();
+        const approveTx = await getGreenTokenContract.approve(
+            import.meta.env.VITE_GREENEARN_ADDRESS,
+          total
+          );
+          const approveReceipt = await approveTx.wait();
     
-        //   if (approveReceipt.status) {
-        //     toast.success("Approval successful!", {
-        //       position: "top-center",
-        //     });
-        //   } else {
-        //     toast.error("Approval failed!", {
-        //       position: "top-center",
-        //     });
-        //     throw new Error("Approval failed");
-        //   }
+          if (approveReceipt.status) {
+            toast.success("Approval successful!", {
+              position: "top-center",
+            });
+          } else {
+            toast.error("Approval failed!", {
+              position: "top-center",
+            });
+            throw new Error("Approval failed");
+          }
         
         const transaction = await contract.buyProduct(id, amount);
         console.log("transaction: ", transaction);
@@ -98,8 +100,8 @@ const BuyProduct = ({id, amount}) => {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
-        <input type="text" placeholder='Product ID' value={id}  className="text-white rounded-lg w-[100%] p-4 bg-[#ffffff23] border border-white/50 backdrop-blur-lg mb-4 outline-none" />
-          <input type="text" placeholder='Price' value={amount} className="text-white rounded-lg w-[100%] p-4 bg-[#ffffff23] border border-white/50 backdrop-blur-lg mb-4 outline-none" />
+        <input type="text" placeholder='Product ID' value={id}  className="text-white rounded-lg w-[100%] p-4 bg-[#ffffff23] border border-white/50 backdrop-blur-lg mb-4 outline-none" readonly/>
+          <input type="text" placeholder='Amount' onChange={(e) => setAmount(e.target.value)} className="text-white rounded-lg w-[100%] p-4 bg-[#ffffff23] border border-white/50 backdrop-blur-lg mb-4 outline-none" />
           <button className="bg-[#427142] text-[white] py-2 px-4 rounded-lg lg:text-[20px] md:text-[20px] font-bold text-[16px] w-[100%] my-4" onClick={handleBuyProduct}>Buy Product &rarr;</button>
         </Box>
       </Modal>

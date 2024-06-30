@@ -20,7 +20,7 @@ const UseGetAllProduct = () => {
             const contract = getGreenEarnContract(readOnlyProvider);
             const res = await contract.getAllproduct();
             const converted = res?.map((item, index)=>{
-                return{id: index,
+                return{id: index+1,
                     address: item[0],
                 name: item[1],
                 image: convertIpfsUrl(item[2]),

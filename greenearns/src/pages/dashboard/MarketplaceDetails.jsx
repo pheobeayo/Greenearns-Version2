@@ -8,7 +8,6 @@ import EditProduct from '../../components/EditProduct';
 import BuyProduct from '../../components/BuyProduct';
 import { useWeb3ModalAccount } from "@web3modal/ethers/react";
 
-
 const MarketplaceDetails = () => {
     const { id } = useParams()
     const allProduct = UseGetAllProduct()
@@ -19,7 +18,6 @@ const MarketplaceDetails = () => {
         if (allProduct.length > 0) {
             const foundTransaction = allProduct.find(data => String(data?.id) === id);
             setTransaction(foundTransaction);
-            console.log("Transaction:", foundTransaction);
         }
     }, [allProduct, id]);
 
@@ -50,13 +48,12 @@ const MarketplaceDetails = () => {
             <p className='flex justify-between my-4'>Seller's location: <span>{transaction.location}</span></p>
             <p className='flex justify-between my-4'>Seller's wallet address: <span>{truncateAddress(transaction.address)}</span></p>
             <EditProduct id={id} />
-          {transaction.address !== address && ( <BuyProduct id={id} amount={convertToWholeNumber(formatUnits(transaction.price))} />)}
+          {transaction.address !== address && ( <BuyProduct id={id} price={convertToWholeNumber(formatUnits(transaction.price))}/>)}
             <p>Kindly drop a comment upon receipt of your products. This is crucial to ensure the seller receives their payment promptly. <a href="#" className='text-[#015C28] font-bold'>Learn More</a></p>
             </div>
             </section></div>) : (<div>
             <LoadingSpinner />
         </div>)} 
-      
     </main>
   )
 }
