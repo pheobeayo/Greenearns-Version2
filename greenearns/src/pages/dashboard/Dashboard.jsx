@@ -1,5 +1,6 @@
 import bannerImg from '../../assets/dashboard.svg'
 import{ NavLink }from 'react-router-dom'
+import UserSellerProfile from '../../components/UserSellerProfile';
 
 const Dashboard = () => {
 
@@ -17,6 +18,9 @@ const Dashboard = () => {
         <div className='lg:w-[40%] md:w-[40%] w-[100%] bg-[#DBECDB] rounded-tl-[50%] rounded-bl-[50%] text-right rounded-tr-[20px] rounded-br-[20px] p-6 flex justify-center'>
             <img src={bannerImg} alt="dashboard" />
         </div>
+    </div>
+    <div className='my-6'>
+      <UserSellerProfile />
     </div>
       </main> 
     

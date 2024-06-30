@@ -20,7 +20,7 @@ const MarketplaceHome = () => {
       };
 
   return (
-        <div className='flex lg:flex-row md:flex-row flex-col justify-between items-center p-12'>
+        <div className='flex lg:flex-row md:flex-row flex-col justify-between items-center p-12 flex-wrap'>
        {isLoading ? (
           <div className='text-black'><LoadingSpinner /> Loading...</div>
         ) : ( allProduct.map((info) => ( <div className='lg:w-[32%] md:w-[32%] w-[100%] p-4 border border-[#0F160F]/20 rounded-lg mb-4 shadow-lg' key={info.id}>

@@ -4,6 +4,8 @@ import UseGetAllProduct from '../../Hooks/UseGetAllProduct'
 import LoadingSpinner from '../../components/Loader/LoadingSpinner'
 import { formatUnits } from 'ethers';
 import Banner from '../../components/Banner';
+import EditProduct from '../../components/EditProduct';
+import BuyProduct from '../../components/BuyProduct';
 
 const MarketplaceDetails = () => {
     const { id } = useParams()
@@ -44,8 +46,8 @@ const MarketplaceDetails = () => {
             <p className='flex justify-between my-4'>Quantity available: <span>{Number(transaction.weight)}</span></p>
             <p className='flex justify-between my-4'>Seller's location: <span>{transaction.location}</span></p>
             <p className='flex justify-between my-4'>Seller's wallet address: <span>{truncateAddress(transaction.address)}</span></p>
-            <button className='bg-[#015C28] w-[100%] py-2 text-white mb-4'>Edit information</button>
-            <button className='bg-white w-[100%] py-2 text-[#015C28] border border-[#015C28] mb-4'>Add Comment</button>
+            <EditProduct id={id} />
+           <BuyProduct id={id} amount={convertToWholeNumber(formatUnits(transaction.price))} />
             <p>Kindly drop a comment upon receipt of your products. This is crucial to ensure the seller receives their payment promptly. <a href="#" className='text-[#015C28] font-bold'>Learn More</a></p>
             </div>
             </section></div>) : (<div>
