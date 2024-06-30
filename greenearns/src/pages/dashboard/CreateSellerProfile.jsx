@@ -3,6 +3,7 @@ import CreateProfile from '../../components/CreateProfile'
 import profileBg from '../../assets/profile.png'
 import useGetSeller from '../../Hooks/useGetSeller'
 import { formatUnits } from 'ethers';
+import EditProfile from '../../components/EditProfile';
 
 const CreateSellerProfile = () => {
   const allSeller = useGetSeller();
@@ -34,7 +35,7 @@ const CreateSellerProfile = () => {
     </div>
     <h2 className='lg:text-[24px] md:text-[24px] text-[18px] font-bold mb-4'>All Seller's Profile</h2>
 
-    <div className='flex lg:flex-row md:flex-row flex-col justify-between items-center my-10 text-[#0F160F]'>
+    <div className='flex lg:flex-row md:flex-row flex-col justify-between items-center my-10 text-[#0F160F] flex-wrap'>
       {allSeller?.map((info) => (
         <div className='lg:w-[32%] md:w-[32%] w-[100%] p-4 border border-[#0F160F]/20 rounded-lg mb-4 shadow-lg' key={info.id}>
         <img src='https://img.freepik.com/free-psd/abstract-background-design_1297-86.jpg?t=st=1719630441~exp=1719634041~hmac=3d0adf83dadebd27f07e32abf8e0a5ed6929d940ed55342903cfc95e172f29b5&w=2000' alt="" className='w-[120px] h-[120px] rounded-full mx-auto'/>
@@ -44,6 +45,7 @@ const CreateSellerProfile = () => {
         <p className='flex justify-between my-4'>Products <span>{info.product}</span></p>
         <p className='flex justify-between my-4'>Seller's wallet address: <span>{truncateAddress(info.address)}</span></p>
         <p className='flex justify-between my-4 font-bold'>Payment Total: <span>{convertToWholeNumber(formatUnits(info.payment))}MTR</span> </p>
+        <EditProfile id={Number(info.id)} />
         </div>
         )
         )}

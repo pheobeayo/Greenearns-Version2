@@ -11,7 +11,7 @@ const allProduct = UseGetAllProduct()
                 <h2 className="text-[#427142] text-3xl font-bold leading-10">
                     Recyclable materials for sale (Prices are in Unit of Measure)
                 </h2>
-                            <div className='flex lg:flex-row md:flex-row flex-col justify-between items-center py-12'>
+                            <div className='flex lg:flex-row md:flex-row flex-col justify-between items-center py-12 flex-wrap'>
                         {allProduct.map((info) => ( <div className='lg:w-[32%] md:w-[32%] w-[100%] p-4 border text-black border-[#0F160F]/20 rounded-lg mb-4' key={info.id}>
                                 <img src={info.image} alt="" className='w-[100%] h-[237px] object-cover object-center rounded-lg'/>
                                 <h3 className='font-bold mt-4 lg:text-[20px] md:text-[20px] text-[18px] capitalise'>{info.name}</h3>
