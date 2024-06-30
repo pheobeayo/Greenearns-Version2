@@ -4,9 +4,11 @@ import profileBg from '../../assets/profile.png'
 import useGetSeller from '../../Hooks/useGetSeller'
 import { formatUnits } from 'ethers';
 import EditProfile from '../../components/EditProfile';
+import { useWeb3ModalAccount } from "@web3modal/ethers/react";
 
 const CreateSellerProfile = () => {
   const allSeller = useGetSeller();
+  const { address } = useWeb3ModalAccount();
 
   const truncateAddress = (address) => {
     if (!address) return '';
@@ -45,7 +47,7 @@ const CreateSellerProfile = () => {
         <p className='flex justify-between my-4'>Products <span>{info.product}</span></p>
         <p className='flex justify-between my-4'>Seller's wallet address: <span>{truncateAddress(info.address)}</span></p>
         <p className='flex justify-between my-4 font-bold'>Payment Total: <span>{convertToWholeNumber(formatUnits(info.payment))}MTR</span> </p>
-        <EditProfile id={Number(info.id)} />
+       {info.address === address && ( <EditProfile id={Number(info.id)} />)}
         </div>
         )
         )}
