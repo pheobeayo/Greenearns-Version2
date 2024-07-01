@@ -3,7 +3,7 @@
 - ## Project Category: Applications in climate change and sustainable carbon reduction 
 
 ## Product Overview:
-Greenearns is a decentralized marketplace application designed to incentivize and empower individuals, recyclable material sellers, recyclable centers, companies and other buyers to actively participate in sustainable waste management and recycling efforts. By leveraging blockchain technology, Greenearns connects sellers offering recyclable materials with buyers in a transparent and rewarding ecosystem. Sellers list their recyclable materials/products while the buyers make purchases of these recyclable products using blockchain (the environment and payments using MTRG). 
+Greenearns is a decentralized marketplace application designed to incentivize and empower individuals, recyclable material sellers, recyclable centres, companies and other buyers to actively participate in sustainable waste management and recycling efforts. By leveraging blockchain technology, Greenearns connects sellers offering recyclable materials with buyers in a transparent and rewarding ecosystem. Sellers list their recyclable materials/products while the buyers make purchases of these recyclable products using blockchain (the environment and payments using MTRG). 
 The users (the sellers and buyers) are rewarded with a token in the form of Greenearns points (GRP), which upon accumulation to a certain amount can be exchanged for a valuable token and used to purchase eco-friendly products, services, or carbon offset certificates.
 
 ## Problem Statement:
@@ -111,9 +111,13 @@ With a decentralized marketplace functionality and blockchain technology to ince
 - https://www.figma.com/design/gceKUuLDZ1hvMGpNoDuhQ4/GreenEarns?node-id=42-3369&t=2L62dYmae7zGYPr0-1 
 
 ## Github Repository:
-- https://github.com/pheobeayo/greenearns 
+- https://github.com/pheobeayo/greenearns
 
-## Deployed Link:
+## Greenearns demo video
+
+https://youtu.be/XiCZlJM6BQM
+
+## Deployed Link: https://greenearns-six.vercel.app/ 
 
 ### Deployed addresses on Meter testnet
 
