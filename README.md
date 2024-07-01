@@ -117,7 +117,9 @@ With a decentralized marketplace functionality and blockchain technology to ince
 
 https://youtu.be/XiCZlJM6BQM
 
-## Deployed Link: https://greenearns-six.vercel.app/ 
+## Deployed Link:
+
+https://greenearns-six.vercel.app/ 
 
 ### Deployed addresses on Meter testnet
 
