@@ -7,8 +7,7 @@ import {
 } from "react-router-dom";
 import { Toaster } from "react-hot-toast";
 import PageLoader from "../components/Loader/PageLoader";
-// import { useWeb3ModalAccount } from "@web3modal/ethers/react";
-// import HomeLayout from "../layout/HomeLayout";
+
 
 const Home = lazy(() => import("../pages/Home"));
 const Aboutus = lazy(() => import("../pages/About-us"));

@@ -11,12 +11,12 @@ const Hero = () => {
         <div className="w-100 md:w-[100%] bg-white">
             <div className="flex flex-col items-center gap-4 mt-28">
 
-                <h1 className="text-[40px] md:text-[40px] font-serif font-extrabold capitalize text-center  text-[#091913] mt-8">
+                <h1 className="text-[40px] md:text-[40px] sm:[20px] font-serif font-extrabold capitalize text-center  text-[#091913] mt-8">
                     Empower climate change and sustainable
                     <br />
                     carbon reduction through recycling.
                 </h1>
-                <h3 className="text-[20px] md:text-[18px] font-serif text-center font-semibold text-[#091913]">
+                <h3 className="text-[20px] md:text-[18px] sm:[12px] font-serif text-center font-semibold text-[#091913]">
                     Trade recyclables on the blockchain, earn rewards, and power the green
                     <br />
                     revolution with every sale and purchase
@@ -42,7 +42,7 @@ const Hero = () => {
                 </div>
             </div>
 
-            <div className="grid grid-cols-4 gap-10 md:flex md:flex-row">
+            <div className="flex gap-16  md:flex md:flex-row sm:flex flex-col">
                 <div className="mt-64 mx-16">
                 <img src={ornament} alt="ornament" />
                 </div>

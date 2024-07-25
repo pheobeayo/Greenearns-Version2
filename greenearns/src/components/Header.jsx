@@ -2,6 +2,7 @@ import { useState } from "react";
 import logo from "../assets/logo.svg";
 import { Link, NavLink } from "react-router-dom";
 import { AiOutlineClose } from "react-icons/ai";
+import { motion } from "framer-motion";
 
 
 const Navbar = () => {
@@ -11,12 +12,24 @@ const Navbar = () => {
         setShowMobileNav((o) => !o);
     };
 
+
+
     return (
         <nav className="bg-white">
             <div className="sticky top-0  z-40 bg-white p-2 border-y ">
                 <div className="flex gap-2 justify-center items-center px-10 pt-8 pr-10">
-                    <img src={logo} alt="logo" />
 
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{
+                            opacity: 1,
+                            rotate: [0, 300, 300, 0],
+                        }}
+                        transition={{ duration: 1 }}
+
+                    >
+                        <img src={logo} alt="logo" />
+                    </motion.div>
                     <div className="flex m-auto gap-16 ">
                         <NavLink to='/' className="hidden lg:flex md:inNavLinkne-block text-[#331000] font-serif hover:text-[#015C28] cursor-grab ">
                             Home

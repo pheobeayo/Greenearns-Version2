@@ -1,6 +1,8 @@
 import { FaTwitter } from "react-icons/fa";
 import { SiDiscord } from "react-icons/si";
 import { HiOutlineMail } from "react-icons/hi";
+import {NavLink } from 'react-router-dom';
+import Subscriber from "./Subscribe";
 import whitelogo from "../assets/whitelogo.svg";
 
 function Footer() {
@@ -9,24 +11,46 @@ function Footer() {
 
     <div
       className="w-[100vw] px-[30px] md:px-[10px] py-[60px]
-    bg-[#2A382A] grid grid-cols-1 md:flex md:flex-row gap-4 "
+    bg-[#2A382A] flex md:flex md:flex-row gap-4 "
     >
       <div className="md:flex flex-wrap md:flex-row justify-between w-full p-10">
-        <div className="md:flex justify-center items-start md:gap-[100px]">
-          <div className="flex flex-row gap-[100px]">
-            <p className="text-gray-50 text-[10px] md:text-[15px] font-semibold">
-              @ 2024 Greenearns
-            </p>
-            <p className="text-gray-50 text-[10px] md:text-[15px] font-semibold">
-              Privacy Policy
-            </p>
-            <p className="text-gray-50 text-[10px] md:text-[15px] font-semibold">
-              Terms of Use
-            </p>
-            <p className="text-gray-50 text-[10px] md:text-[15px] font-semibold">
-              Contact us
-            </p>
+      <div className='mx-4'>
+          <h2 className="text-white font-mono text-xl sm:text-2xl font-bold leading-10 mt-4">
+            Subscribe to our mailing list
+          </h2>
+          <p className="text-justify pt-[10px] font-mono text-white text-xs sm:text-sm font-normal leading-5 sm:leading-7">
+            Join us in making a meaningful impact through responsible
+            <br /> choices and shared commitment to a greener future.{" "}
 
+          </p>
+
+          <Subscriber />
+        </div>
+        <div className="md:flex justify-center items-start md:gap-[200px]">
+          <div>
+            <ul className="space-y-7 ">
+            
+            <li>
+            <NavLink className="text-gray-50 text-[10px] md:text-[15px] font-medium font-mono">
+              Privacy Policy
+            </NavLink>
+            </li>
+            <li>
+            <NavLink className="text-gray-50 text-[10px] md:text-[15px]  font-medium font-mono">
+              Terms of Use
+            </NavLink>
+            </li>
+            <li>
+            <NavLink className="text-gray-50 text-[10px] md:text-[15px]  font-medium font-mono">
+              Contact us
+            </NavLink>
+            </li>
+            <li><NavLink className="text-gray-50 text-[10px] md:text-[15px]  font-medium font-mono ">
+              @ 2024 Greenearns
+            </NavLink>
+            </li>
+            </ul>
+            </div>
 
 
             <div>
@@ -34,7 +58,7 @@ function Footer() {
                 <img alt="whitelogo" src={whitelogo} className="mx-12" />
               </div>
 
-              <p className="text-opacity-90 py-[12px] px-10 text-white text-[10px] md:text-[15px] font-normal">
+              <p className="text-opacity-90 py-[12px] px-10 font-mono text-white text-[10px] md:text-[15px] font-normal">
                 Where environmental consciousness
                 <br />meets blockchain innovation
               </p>
@@ -44,7 +68,7 @@ function Footer() {
                 <HiOutlineMail />
               </div>
             </div>
-          </div>
+          
         </div>
       </div>
     </div>
