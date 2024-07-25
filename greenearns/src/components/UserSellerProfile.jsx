@@ -3,9 +3,9 @@ import { useWeb3ModalAccount } from "@web3modal/ethers/react";
 import { Link } from 'react-router-dom';
 import useGetSeller from '../Hooks/useGetSeller';
 import UseGetAllProduct from '../Hooks/UseGetAllProduct';
-import { RiFolderWarningFill } from "react-icons/ri";
 import LoadingSpinner from './Loader/LoadingSpinner';
 import { formatUnits } from 'ethers';
+import emptyCart from '../assets/cart.png'
 
 const UserSellerProfile = () => {
   const allProduct = UseGetAllProduct();
@@ -45,9 +45,9 @@ const UserSellerProfile = () => {
         {isLoading ? (
           <LoadingSpinner />
         ) : userProducts.length === 0 ? (
-          <div className='flex flex-col items-center w-full text-[#0F160F]'>
-            <RiFolderWarningFill className='text-[48px] mb-4'/>
-            <h2 className='text-[18px] lg:text-[24px] md:text-[24px] mb-4'>No Product yet!</h2>
+          <div className='flex flex-col items-center w-full text-[rgb(15,22,15)]'>
+            <img src={emptyCart} alt="" className='w-[300px] h-[300px]'/>
+            <h2 className='text-[18px] lg:text-[24px] md:text-[24px] mb-4 text-center'>No Product yet!</h2>
           </div>
         ) : (
           userProducts.map((info, index) => (

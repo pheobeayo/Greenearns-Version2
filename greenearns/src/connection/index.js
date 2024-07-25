@@ -1,6 +1,6 @@
 import { createWeb3Modal, defaultConfig } from '@web3modal/ethers/react'
 
-export const SUPPORTED_CHAIN = 83;
+export const SUPPORTED_CHAIN = 1115;
 
 export const isSupportedChain = (chainId) =>
   Number(chainId) === SUPPORTED_CHAIN;
@@ -14,10 +14,10 @@ export const isSupportedChain = (chainId) =>
 // }
 
 
-const meter = {
-  chainId: 83,
-  name: 'Meter',
-  currency: 'MTR',
+const core = {
+  chainId: 1115,
+  name: 'Core',
+  currency: 'tCORE',
   explorerUrl: 'https://explorer-warringstakes.meter.io',
   rpcUrl: import.meta.env.VITE_INFURA_RPC
 }
@@ -31,7 +31,7 @@ const metadata = {
 
 export const configWeb3Modal = () => createWeb3Modal({
   ethersConfig: defaultConfig({ metadata }),
-  chains: [meter],
+  chains: [core],
   projectId: import.meta.env.VITE_PROJECT_ID,
   enableAnalytics: false,
   themeVariables: {

@@ -12,7 +12,7 @@ import tokenAbi from './tokenAbi.json'
 
 export const getGreenTokenContract = (providerOrSigner) =>
     new ethers.Contract(
-        import.meta.env.VITE_METERTOKEN_ADDRESS,
+        import.meta.env.VITE_GREENTOKEN_ADDRESS,
         tokenAbi,
         providerOrSigner
     );
