@@ -65,8 +65,8 @@ const CreateProfile = () => {
           setSellerName("")
           setLocation("")
           setMail("")
-    
-          handleClose();
+            
+          setOpen(false)
         }
       };
   return (

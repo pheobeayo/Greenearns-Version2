@@ -66,7 +66,7 @@ const EditProfile = ({id}) => {
           setLocation("")
           setMail("")
     
-          handleClose();
+          setOpen(false)
         }
       };
   return (

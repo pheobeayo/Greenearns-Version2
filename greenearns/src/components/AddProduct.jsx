@@ -51,7 +51,7 @@ const AddProduct = () => {
     const changeHandler = (event) => {
       const file = event.target.files[0];
       if (file) {
-        const fileSizeInMB = file.size / (1024 * 1024); // Convert file size to MB
+        const fileSizeInMB = file.size / (1024 * 1024);
         if (fileSizeInMB > 1) {
           setError('File size exceeds 1MB. Please choose a smaller file.');
           setSelectedFile(null);
@@ -119,8 +119,6 @@ const AddProduct = () => {
         console.log("transaction: ", transaction);
         const receipt = await transaction.wait();
   
-        console.log("receipt: ", receipt);
-  
         if (receipt.status) {
           return toast.success("Listing successful!", {
             position: "top-center",
@@ -141,8 +139,7 @@ const AddProduct = () => {
         setProductName("")
         setProductWeight("")
         setProductPrice("")
-  
-        handleClose();
+        setShowForm(false)
       }
     };
   

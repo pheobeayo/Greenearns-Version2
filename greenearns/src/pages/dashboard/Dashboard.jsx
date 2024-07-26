@@ -5,7 +5,6 @@ import UserSellerProfile from '../../components/UserSellerProfile';
 const Dashboard = () => {
   const navigate = useNavigate();
   return (
-
     <main className="bg-white">
        <div className='flex flex-col lg:flex-row md:flex-row bg-[#427142] rounded-[20px] w-[100%] text-white'>
         <div className='lg:w-[60%] md:w-[60%] w-[100%] p-8'>

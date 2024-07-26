@@ -144,7 +144,7 @@ const EditProduct = ({id}) => {
         setProductWeight("")
         setProductPrice("")
   
-        handleClose();
+        setOpen(false)
       }
     };
   
