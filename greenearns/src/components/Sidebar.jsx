@@ -28,7 +28,7 @@ const Sidebar = () =>  {
       <NavLink to="market_place" className="text-[14px] text-[#0F160F]  flex items-center py-4 mb-4 px-6  hover:text-[#015C28]" style={({isActive}) => isActive ? activeStyle : null }><ImCart className="mr-4" /> Marketplace</NavLink>
       <NavLink to="notifications" className="text-[14px] text-[#0F160F]  flex items-center py-4 mb-4 px-6  hover:text-[#015C28]" style={({isActive}) => isActive ? activeStyle : null }><BsBell className="mr-4" /> Notifications</NavLink>
       <NavLink to="transactions" className="text-[14px] text-[#0F160F]  flex items-center py-4 mb-4 px-6  hover:text-[#015C28]" style={({isActive}) => isActive ? activeStyle : null }><BsReceipt className="mr-4" /> Transactions</NavLink>
-      <button className="text-[14px] text-[#0F160F]  flex items-center py-4 mb-4 px-6  hover:text-[#015C28]"><TbSettings className="mr-4"  /> Log out</button>
+      <button className="text-[14px] text-[#0F160F]  flex items-center py-4 mb-4 px-6  hover:text-[#015C28]" onClick={() => disconnect()}><TbSettings className="mr-4"  /> Log out</button>
     </div>
   );
 }
