@@ -3,7 +3,7 @@
 - ## Project Category: Applications in climate change and sustainable carbon reduction 
 
 ## Product Overview:
-Greenearns is a decentralized marketplace application designed to incentivize and empower individuals, recyclable material sellers, recyclable centres, companies and other buyers to actively participate in sustainable waste management and recycling efforts. By leveraging blockchain technology, Greenearns connects sellers offering recyclable materials with buyers in a transparent and rewarding ecosystem. Sellers list their recyclable materials/products while the buyers make purchases of these recyclable products using blockchain (the environment and payments using MTRG). 
+Greenearns is a decentralized marketplace application designed to incentivize and empower individuals, recyclable material sellers, recyclable centres, companies and other buyers to actively participate in sustainable waste management and recycling efforts. By leveraging blockchain technology, Greenearns connects sellers offering recyclable materials with buyers in a transparent and rewarding ecosystem. Sellers list their recyclable materials/products while the buyers make purchases of these recyclable products using blockchain (the environment and payments using tCORE). 
 The users (the sellers and buyers) are rewarded with a token in the form of Greenearns points (GRP), which upon accumulation to a certain amount can be exchanged for a valuable token and used to purchase eco-friendly products, services, or carbon offset certificates.
 
 ## Problem Statement:
@@ -11,6 +11,14 @@ Efficient waste management and recycling remain a significant challenge worldwid
 
 ## Proposed Solution:
 Greenearns addresses these challenges by providing a decentralized marketplace for recyclable materials, integrating blockchain technology for secure, transparent transactions, and introducing a tokenized reward system in the form of GRP. The product leverages blockchain technology to revolutionize waste management and recycling, creating a solution that not only encourages participation but also promotes sustainability and environmental consciousness.
+
+## Screenshots
+
+- 1
+![Screenshot](./greenearns/public/screenshot2.png)
+- 2
+![Screenshot](./greenearns/public/screenshot.png)
+
 
 ## Product Goals:
 
@@ -31,7 +39,7 @@ Enhance User Trust Build trust within the platform through user ratings, reviews
    
 - Listing Functionality:
 
-    - Sellers: Sellers can list recyclable materials/products, including images, description of the recyclable product - type of recyclable material, quantity, prices per unit of measure (e.g. gram) in MTRG, and location.
+    - Sellers: Sellers can list recyclable materials/products, including images, description of the recyclable product - type of recyclable material, quantity, prices per unit of measure (e.g. gram) in tCORE, and location.
 
     - Sellers get rewarded with a GRP (10GRP) upon successful product listing. 
 
@@ -59,7 +67,7 @@ Buyers can initiate purchases and make secure payments using blockchain technolo
 
 - Smart contracts facilitate secure and transparent transactions.
 
-- Escrow service holds payments made(MTRG) until buyers confirm receipt of recyclable materials.
+- Escrow service holds payments made(tCORE) until buyers confirm receipt of recyclable materials.
 
 - Once confirmed, cryptocurrency payments are released to sellers in their wallets. 
 
@@ -115,16 +123,13 @@ With a decentralized marketplace functionality and blockchain technology to ince
 
 ## Greenearns demo video
 
-https://youtu.be/XiCZlJM6BQM
+
 
 ## Deployed Link:
 
-https://greenearns-six.vercel.app/ 
 
 ### Deployed addresses on Meter testnet
 
-- GreenToken  deployed to 0x395539FF528cE1d10B87a4CD3CD99Fe950Cef4D3
+- GreenToken  deployed to 0x951fAa8B5E040DdC3f0489D00CF1E66be2355b25
 
-- GreenEarn  deployed to 0x258d8037305a718895E6Df7e58F6E2BDcC99D07c
-
-- GreenMint  deployed to 0x7bc0450B2A464Aa89fFa0F51C7e69ffEdCb9dF60
+- GreenEarn  deployed to 0x7FEa3580063ecA42958ebaB5e4035bEBB109dD12

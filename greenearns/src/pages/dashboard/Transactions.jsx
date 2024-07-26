@@ -1,6 +1,6 @@
 import React, { useCallback, useState, useEffect } from "react";
-import { readOnlyProvider, wssProvider } from "../constants/providers";
-import { getGreenEarnContract } from "../constants/contract";
+import { readOnlyProvider, wssProvider } from "../../constants/providers";
+import { getGreenEarnContract } from "../../constants/contract";
 import { ethers } from "ethers";
 import { useWeb3ModalAccount } from "@web3modal/ethers/react";
 import bgIcon from '../../assets/transaction.png'
