@@ -9,7 +9,7 @@ const How = () => {
           <br />consciousness meets blockchain innovation
         </h1>
 
-        <div className="bg-white flex gap-4 md:flex md:flex-row">
+        <div className="bg-white flex gap-4 md:flex md:flex-row  sm:flex-col">
           <div className="content-card w-full md:w-[32%] mb-5 h-full rounded-t-lg px-8 mt-10 md:mx-10">
             <hr className="h-px my-8 bg-black border-0 dark:bg-black" />
             <div className="w-full h-1/2">

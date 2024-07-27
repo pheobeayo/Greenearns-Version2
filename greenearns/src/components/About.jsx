@@ -9,7 +9,7 @@ const About = () => {
                         How GreenEarns work
                     </h2>
                 </div>
-                <div className="flex gap-4 md:flex md:flex-row">
+                <div className="flex gap-4 md:flex md:flex-row sm:flex-col">
                     <div className="content-card w-full md:w-[70%] mb-5 h-full p-1">
                         <p className=" text-[#0F160F] font-mono text-lg md:text-lg sm:text-base font-normal text-justify ">
                            <span className='font-extrabold '> Sign Up and Get Started:</span> Begin by signing up on the GreenRewards platform. Join a community of eco-conscious individuals dedicated to making a positive impact on the environment.

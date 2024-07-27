@@ -107,7 +107,7 @@ const Navbar = () => {
 
             {/* Mobile Menu */}
             {showMobileNav && (
-                <div className="py-9 px-11 tab:hidden fixed bg-[#150E28] w-full min-h-screen top-0 z-50">
+                <div className="py-9 px-11 tab:hidden fixed bg-white w-full min-h-screen top-0 z-50">
                     <div
                         className="flex justify-end mb-14"
                         onClick={() => setShowMobileNav(false)}
@@ -121,20 +121,20 @@ const Navbar = () => {
                         <ul className="flex flex-col gap-6 sm:gap-8 text-lg">
                             <li>
                                 <NavLink
-                                    href="/fund/0"
+                                    href="/"
                                     onClick={handleMobileMenu}
                                     className="cursor-pointer"
                                 >
-                                    Fund
+                                    Home
                                 </NavLink>
                             </li>
                             <li>
                                 <NavLink
-                                    href="/submit-proposal"
+                                    href="/marketplace"
                                     onClick={handleMobileMenu}
                                     className="cursor-pointer"
                                 >
-                                    Submit proposal
+                                    Market place
                                 </NavLink>
                             </li>
                             <li>

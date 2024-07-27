@@ -11,7 +11,7 @@ function Footer() {
 
     <div
       className="w-[100vw] px-[30px] md:px-[10px] py-[60px]
-    bg-[#2A382A] flex md:flex md:flex-row gap-4 "
+    bg-[#2A382A] flex md:flex md:flex-row gap-4 sm:flex-col"
     >
       <div className="md:flex flex-wrap md:flex-row justify-between w-full p-10">
       <div className='mx-4'>
@@ -54,8 +54,8 @@ function Footer() {
 
 
             <div>
-              <div className="flex flex-row items-center gap-4">
-                <img alt="whitelogo" src={whitelogo} className="mx-12" />
+              <div className="flex flex-row items-center gap-4 sm:flex-col">
+                <img alt="whitelogo" src={whitelogo} className="mx-4" />
               </div>
 
               <p className="text-opacity-90 py-[12px] px-10 font-mono text-white text-[10px] md:text-[15px] font-normal">
