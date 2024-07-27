@@ -1,34 +1,53 @@
 import React, { useCallback, useState, useEffect } from "react";
 import { readOnlyProvider, wssProvider } from "../../constants/providers";
 import { getGreenEarnContract } from "../../constants/contract";
-import { ethers } from "ethers";
+import { formatUnits } from 'ethers';
 import { useWeb3ModalAccount } from "@web3modal/ethers/react";
 import bgIcon from '../../assets/transaction.png'
 import { useNavigate } from 'react-router-dom'
-import useGetSeller from '../../Hooks/useGetSeller'
-// import { useWeb3ModalAccount } from "@web3modal/ethers/react";
-// import useGetPurchase from '../../Hooks/useGetPurchase';
+import UseGetAllProduct from "../../Hooks/UseGetAllProduct";
+import useGetSeller from "../../Hooks/useGetSeller";
+import emptyPurchase from "../../assets/order.png"
+import ApprovePayment from "../../components/ApprovePayment";
 
 const Transactions = () => {
   const navigate = useNavigate();
   const allSeller = useGetSeller();
-  // const { address } = useWeb3ModalAccount();
+  const { address } = useWeb3ModalAccount();
+  const allProduct = UseGetAllProduct()
 
   const [purchase, setPurchase] = useState()
+  // const [newData, setNewData] = useState()
 
-    const fetchPurchase = async () => {
-        try {
-            const contract = getGreenEarnContract(readOnlyProvider)
-
-            contract.on("ProductBought", (user, id, amount) => {
-                console.log ("Whatever", user, id, amount)
-            })
-        } catch(err) {
-
-        }
-    }
-
+  const [buyerAddress, setBuyerAddress] = useState(`${address}`);
   const userSeller = allSeller.find((data) => data?.address === address);
+
+  useEffect(() => {
+    const fetchEvents = async () => {
+      const contract = getGreenEarnContract(readOnlyProvider)
+      const deploymentBlockNumber = 21636076; 
+
+      const filter = contract.filters.ProductBought(buyerAddress);
+      const events = await contract.queryFilter(filter, deploymentBlockNumber, 'latest'); 
+
+      const purchases = events.map(event => event.args);
+      const converted = purchases?.map((item, index)=>{
+        return{
+            address: item[0],
+            id: Number(item[1]),
+            quantity: Number(item[2]),
+      }      
+    }) 
+      setPurchase(converted);
+    };
+
+    fetchEvents();
+  }, [buyerAddress]);
+
+  const convertToWholeNumber = (formattedNumber) => {
+    const number = parseFloat(formattedNumber);
+    return number.toFixed();
+  };
 
   return (
     <main>
@@ -61,6 +80,31 @@ const Transactions = () => {
         )}
       </div>
     </section>
+    <section className="text-[#0F160F] flex lg:flex-row md:flex-row flex-col justify-between">
+    {purchase?.length === 0 ? (
+      <div className="flex flex-col items-center w-full text-[rgb(15,22,15)]">
+          <img src={emptyPurchase} alt="" />
+          <p>No purchase yet</p>
+          </div>
+        ) : (purchase?.map((p, index) => {
+          const userPurchase = allProduct.find((data) => data?.id === p.id);
+          return (
+            <div key={index} className="border p-4 mb-4 rounded-lg shadow-md lg:w-[32%] md:w-[32%] w-[100%]">
+              <p className="my-4"><strong>Quantity:</strong> {p.quantity}</p>
+              {userPurchase ? (
+                <div>
+                  <img src={userPurchase.image} alt="" className="w-[300px] h-[300px] mb-4" />
+                  <p><strong>Product Name:</strong> {userPurchase.name}</p>
+                  <p className='flex justify-between my-4 font-bold'>Price <span>{convertToWholeNumber(formatUnits(userPurchase.price))}tCORE</span> </p>
+                </div>
+              ) : (
+                <p>Product details not available.</p>
+              )}
+              <ApprovePayment id={p.id} index={index} />
+            </div>
+          );
+        }))}
+      </section>
     </main>
   )
 }
