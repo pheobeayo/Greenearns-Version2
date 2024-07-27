@@ -62,7 +62,7 @@ export default function Subscriber() {
               className="sm:mr-2 px-[6px] sm:px-[60px] 
               sm:py-3 border 
             border-gray-300 rounded-l-md 
-            focus:outline-none focus:border-blue-500 bg-transparent"
+            focus:outline-none focus:border-blue-500 bg-transparent font-mono"
               placeholder="Email Address"
               value={address}
               onChange={handleChange}
@@ -70,7 +70,7 @@ export default function Subscriber() {
             <button
               className="px-2 sm:px-4 py-2 bg-[#8BC34A] text-black
             rounded-r-md hover:bg-[#2A382A] 
-            focus:outline-none"
+            focus:outline-none font-mono"
               type="submit"
             >
               Subscribe
