@@ -4,7 +4,7 @@ const How = () => {
   return (
     <div className="bg-white">
       <div className="container mx-auto px-8 sm:px-[80px] py-[100px]">
-        <h2 className="text-[#427142] text-3xl md:text-3xl sm:text-2xl pb-[48px] font-bold leading-10">
+        <h2 className="text-[#427142] text-3xl md:text-3xl sm:text-2xl sm:text-justify pb-[48px] font-bold leading-10">
           Welcome to GreenEarns, <br /> where environmental consciousness meets blockchain
           <br></br>innovation
         </h2>
