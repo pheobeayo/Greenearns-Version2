@@ -5,20 +5,14 @@ export const SUPPORTED_CHAIN = 1115;
 export const isSupportedChain = (chainId) =>
   Number(chainId) === SUPPORTED_CHAIN;
 
-// const meterMainnet = {
-//   chainId: 82,
-//   name: 'Meter',
-//   currency: 'MTR',
-//   explorerUrl: 'https://etherscan.io',
-//   rpcUrl: import.meta.env.VITE_INFURA_RPC
-// }
+
 
 
 const core = {
   chainId: 1115,
   name: 'Core',
   currency: 'tCORE',
-  explorerUrl: 'https://explorer-warringstakes.meter.io',
+  explorerUrl: 'https://scan.test.btcs.network/',
   rpcUrl: import.meta.env.VITE_INFURA_RPC
 }
 
