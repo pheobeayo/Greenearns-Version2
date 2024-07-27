@@ -13,7 +13,7 @@ function Footer() {
       className="w-[100vw] px-[30px] md:px-[10px] py-[60px]
     bg-[#2A382A] flex md:flex md:flex-row gap-4 sm:flex-col"
     >
-      <div className="md:flex flex-wrap md:flex-row justify-between w-full p-10">
+      <div className="md:flex flex-wrap md:flex-row justify-between items-center w-full p-10">
       <div className='mx-4'>
           <h2 className="text-white font-mono text-xl sm:text-2xl font-bold leading-10 mt-4">
             Subscribe to our mailing list
@@ -26,7 +26,7 @@ function Footer() {
 
           <Subscriber />
         </div>
-        <div className="md:flex justify-center items-start md:gap-[200px]">
+        <div className="md:flex justify-center items-center md:gap-[200px]">
           <div>
             <ul className="space-y-7 ">
             
@@ -53,7 +53,7 @@ function Footer() {
             </div>
 
 
-            <div>
+            <div >
               <div className="flex flex-row items-center gap-4 sm:flex-col">
                 <img alt="whitelogo" src={whitelogo} className="mx-4" />
               </div>

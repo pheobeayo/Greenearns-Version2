@@ -6,13 +6,12 @@ import Recycle from "../components/Recycle";
 const Home = () => {
   return (
     <main className="bg-white">
-      <section className="w-[100vw]  bg-white">
-        <Hero />
+      
+      <Hero />
         <How />
         <Recycle />
         <About />
-      </section>
-    </main>
+      </main>
   );
 };
 
