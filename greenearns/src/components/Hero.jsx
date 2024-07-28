@@ -24,9 +24,9 @@ const Hero = () => {
                                 </div>
                                 <div className="grid grid-cols-2 gap-0 h-max">
                                         <div className="h-[100px] w-[100px] "> <img src={ornament} alt='ornament' /></div>
-                                        <div className="h-[200px] w-[200px]"><img src={heroimage2} alt="middleimage1" /></div>
+                                        <div className="h-[200px] w-[200px] sm:pr-1"><img src={heroimage2} alt="middleimage1" /></div>
                                         <div className="h-[200px] w-[200px] lg:block hidden sm:hidden"> <img src={heroimage1} alt="middleimage2" /></div>
-                                        <div className="h-[100px] w-[100px] lg:block hidden  sm:hidden"><img src={ornament} alt='ornament' /></div>
+                                        <div className="h-[100px] w-[100px] mt-6 lg:block hidden  sm:hidden"><img src={ornament} alt='ornament' /></div>
                                 </div>
                         </div>
                 </div>
