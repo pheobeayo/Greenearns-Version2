@@ -15,7 +15,7 @@ Greenearns addresses these challenges by providing a decentralized marketplace f
 ## Screenshots
 
 - 1
-![Screenshot](./greenearns/public/screenshot2.png)
+![Screenshot](./greenearns/public/screenshot2.jpg)
 - 2
 ![Screenshot](./greenearns/public/screenshot.png)
 
@@ -119,16 +119,19 @@ With a decentralized marketplace functionality and blockchain technology to ince
 - https://www.figma.com/design/gceKUuLDZ1hvMGpNoDuhQ4/GreenEarns?node-id=42-3369&t=2L62dYmae7zGYPr0-1 
 
 ## Github Repository:
-- https://github.com/pheobeayo/greenearns
+-https://github.com/greenearns/greenearns 
 
 ## Greenearns demo video
 
-
+https://www.youtube.com/watch?v=uX5olqDyrvA
 
 ## Deployed Link:
+https://greenearns-v2.vercel.app/
 
+## For the onchain transaction:
+ https://scan.test.btcs.network/address/0xC7B62c3c206e1a20dCAb1d955804394B82D89203 
 
-### Deployed addresses on Meter testnet
+### Deployed addresses on Core Chain Testnet
 
 - GreenToken  deployed to 0x951fAa8B5E040DdC3f0489D00CF1E66be2355b25
 
