@@ -10,7 +10,6 @@ import PageLoader from "../components/Loader/PageLoader";
 
 
 const Home = lazy(() => import("../pages/Home"));
-const Aboutus = lazy(() => import("../pages/About-us"));
 const DashboardLayout = lazy(() => import("../layout/DashboardLayout"));
 const Dashboard = lazy(() => import("../pages/dashboard/Dashboard"));
 const CreateSellerProfile = lazy(() => import("../pages/dashboard/CreateSellerProfile"));
@@ -30,7 +29,6 @@ const router = createBrowserRouter(createRoutesFromElements(
     <Route index element={<Home />} />
       <Route path="/marketplace" element={<MarketplaceHome />} />
       <Route path="/marketplace/:id" element={<MarketplaceHomeDetails/>} />
-      <Route path="/about-us" element={<Aboutus />} />
     </Route>
     <Route path="/dashboard" element={<DashboardLayout />} >
       <Route index element={<Dashboard />} />
@@ -50,7 +48,7 @@ const AllRoutes = () => {
  
 
   return (
-    <div className="w-full mx-auto bg-white  min-h-[100vh] font-opensans max-w-[1440px]">
+    <div className="w-full mx-auto bg-white  min-h-[100vh] font-opensans max-w-[1440px] text-[#0F160F]">
       <Toaster />
       <Suspense fallback={<PageLoader />}>
 

@@ -1,157 +1,21 @@
-import { useState } from "react";
-import logo from "../assets/logo.svg";
-import { Link, NavLink } from "react-router-dom";
-import { AiOutlineClose } from "react-icons/ai";
-import { motion } from "framer-motion";
+import React from 'react'
+import logo from '../assets/logo.svg'
+import { NavLink } from 'react-router-dom'
 
-
-const Navbar = () => {
-    const [showMobileNav, setShowMobileNav] = useState(false);
-
-    const handleMobileMenu = () => {
-        setShowMobileNav((o) => !o);
-    };
-
-
-
-    return (
-        <nav className="bg-white">
-            <div className="sticky top-0  z-40 bg-white p-2 border-y ">
-                <div className="flex gap-2 justify-center items-center px-10 pt-8 pr-10">
-
-                    <motion.div
-                        initial={{ opacity: 0 }}
-                        animate={{
-                            opacity: 1,
-                            rotate: [0, 300, 300, 0],
-                        }}
-                        transition={{ duration: 1 }}
-
-                    >
-                        <img src={logo} alt="logo" />
-                    </motion.div>
-                    <div className="flex m-auto gap-16 ">
-                        <NavLink to='/' className="hidden lg:flex md:inNavLinkne-block text-[#331000] font-serif hover:text-[#015C28] cursor-grab ">
-                            Home
-                        </NavLink>
-                        <NavLink to='/marketplace' className="hidden lg:flex md:inNavLinkne-block text-[#331000] font-serif hover:text-[#015C28] cursor-grab ">
-                            Marketplace
-                        </NavLink>
-                        <NavLink to='/about-us' className="hidden lg:flex md:inNavLinkne-block  text-[#331000] font-serif hover:text-[#015C28] cursor-grab ">
-                            About us
-                        </NavLink>
-                    </div>
-
-                    <w3m-button />
-
-                    <div className="md:hidden">
-                        <button
-                            data-collapse-toggle="navbar-default"
-                            type="button"
-                            className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-                            aria-controls="navbar-default"
-                            aria-expanded="false"
-                        >
-                            <span className="sr-only">Open main menu</span>
-                            <svg
-                                className="w-5 h-5"
-                                aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg"
-                                fill="none"
-                                viewBox="0 0 17 14"
-                            >
-                                <path
-                                    stroke="currentColor"
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    strokeWidth="2"
-                                    d="M1 1h15M1 7h15M1 13h15"
-                                />
-                            </svg>
-                        </button>
-                        <div
-                            className="hidden w-full md:block md:w-auto"
-                            id="navbar-default"
-                        >
-                            <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-                                <li>
-                                    <Link
-                                        to="/"
-                                        class="block py-2 px-3 text-[#0F160F] bg-white rounded md:bg-transparent md:text-[#331000] md:p-0 dark:text-white md:dark:text-[#331000]"
-                                        aria-current="page"
-                                    >
-                                        Home
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link
-                                        to="/market-place"
-                                        class="block py-2 px-3 text-[#0F160F] rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#331000] md:p-0 dark:text-white md:dark:hover:text-[#331000] dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent cursor-grab "
-                                    >
-                                        Marketplace
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link
-                                        to="/about-us"
-                                        class="block py-2 px-3 text-[#0F160F] rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#331000] md:p-0 dark:text-white md:dark:hover:text-[#331000] dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-                                    >
-                                        About us
-                                    </Link>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            {/* Mobile Menu */}
-            {showMobileNav && (
-                <div className="py-9 px-11 tab:hidden fixed bg-white w-full min-h-screen top-0 z-50">
-                    <div
-                        className="flex justify-end mb-14"
-                        onClick={() => setShowMobileNav(false)}
-                    >
-                        <AiOutlineClose
-                            size={23}
-                            className="border rounded-full border-purple-50 px-1"
-                        />
-                    </div>
-                    <nav>
-                        <ul className="flex flex-col gap-6 sm:gap-8 text-lg">
-                            <li>
-                                <NavLink
-                                    href="/"
-                                    onClick={handleMobileMenu}
-                                    className="cursor-pointer"
-                                >
-                                    Home
-                                </NavLink>
-                            </li>
-                            <li>
-                                <NavLink
-                                    href="/marketplace"
-                                    onClick={handleMobileMenu}
-                                    className="cursor-pointer"
-                                >
-                                    Market place
-                                </NavLink>
-                            </li>
-                            <li>
-                                <NavLink
-                                    href="/about-us"
-                                    onClick={handleMobileMenu}
-                                    className="cursor-pointer"
-                                >
-                                    About us
-                                </NavLink>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-            )}
+const Header = () => {
+  return (
+    <header className='py-8 bg-[#2B452B]/5'>
+        <div className='w-[90%] mx-auto flex justify-between'>
+        <img src={logo} alt="" className='w-[235px] h-[43px]' />
+        <nav>
+            <NavLink to='/' className='text-[#0F160F]/90 hover:text-[#015C28] hover:font-[700] mr-6 text-[18px]'>Home</NavLink>
+            <NavLink to='/marketplace' className='text-[#0F160F]/90 hover:text-[#015C28] hover:font-[700] mr-6 text-[18px]'>MarketPlace</NavLink>
+            <a href='#about-us' className='text-[#0F160F]/90  hover:text-[#015C28] hover:font-[700] text-[18px]'>About Us</a>
         </nav>
-    );
-};
+        <w3m-button />
+        </div>
+    </header>
+  )
+}
 
-export default Navbar;
+export default Header
