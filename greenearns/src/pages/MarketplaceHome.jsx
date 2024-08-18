@@ -34,7 +34,7 @@ const MarketplaceHome = () => {
     const displayedProducts = allProduct.slice(startIndex, startIndex + itemsPerPage);
 
     return (
-        <div className='py-12'>
+        <div className='lg:w-[90%] md:w-[90%] w-[100%] mx-auto py-12 px-4 lg:px-0 md:px-0'>
             {isLoading ? (
                 <div className='text-black'><LoadingSpinner /> Loading...</div>
             ) : (
@@ -47,7 +47,7 @@ const MarketplaceHome = () => {
                                     <h3 className='font-bold mt-4 lg:text-[20px] md:text-[20px] text-[18px] capitalise font-titiliumweb'>{info.name}</h3>
                                     <p className='flex justify-between my-4'>Quantity <span>{Number(info.weight)}</span></p>
                                     <p className='flex justify-between my-4'>Seller &apos;s location <span>{info.location}</span></p>
-                                    <p className='flex justify-between my-4 font-bold'>Price <span>{convertToWholeNumber(formatUnits(info.price))} MTR</span></p>
+                                    <p className='flex justify-between my-4 font-bold'>Price <span>{convertToWholeNumber(formatUnits(info.price))} tCORE</span></p>
                                     <button className='my-4 border w-[100%] py-2 px-4 border-[#427142] bg-white text-[#427142] rounded-lg'>View details</button>
                                 </Link>
                             </div>

@@ -27,7 +27,7 @@ const MobileSidebar = () => {
             <img src={logo} alt="" className="w-[150px] my-4" />
       <Hamburger toggled={isOpen} toggle={setOpen} color="#427142" direction="right"/>
       {isOpen && (
-        <div className="bg-[#DBECDB] text-[rgb(15,22,15)] p-8 py-12 h-[100vh] w-[100%] absolute top-20 left-0 bg-baseBlack/70 z-50'">
+        <div className="bg-[#DBECDB] text-[rgb(15,22,15)] p-8 py-12 h-[100vh] w-[100%] absolute top-20 left-0 bg-baseBlack/70 z-50">
             <w3m-button />
           <NavLink
             to="/dashboard"
