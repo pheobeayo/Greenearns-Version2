@@ -27,7 +27,7 @@ const Home = () => {
             </button>
           </div>
         </div>
-        <div className="w-[500px] h-[500px] bg-[#015C28]/20 blur-[80px] absolute top-0 left-0 rounded-full"></div>
+        <div className="lg:w-[500px] lg:h-[500px] md:w-[500px] md:h-[500px] w-[250px] h-[250px] bg-[#015C28]/20 blur-[80px] absolute top-0 left-0 rounded-full"></div>
         <div className="flex flex-col lg:flex-row md:flex-row justify-between lg:w-[90%] md:w-[90%] w-[100%] mx-auto mb-10">
           <div className="flex justify-between items-center lg:w-[45%] md:w-[45%]w-[100%]">
             <img src={bgImg} alt="" className="hidden lg:block md:block"/>

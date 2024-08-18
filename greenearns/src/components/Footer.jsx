@@ -11,7 +11,7 @@ const Footer = () => {
       className="bg-[#2A382A] text-white bg-no-repeat py-8 px-2"
       style={{
         backgroundImage: `url(${bannerLogo})`,
-        backgroundSize: "20%",
+        backgroundSize: "30%",
         backgroundPosition: "left bottom",
       }}
     >
