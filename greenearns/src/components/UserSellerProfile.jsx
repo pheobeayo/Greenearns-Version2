@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useWeb3ModalAccount } from "@web3modal/ethers/react";
 import { Link } from "react-router-dom";
 import useGetSeller from "../Hooks/useGetSeller";

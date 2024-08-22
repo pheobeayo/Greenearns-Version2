@@ -1,7 +1,6 @@
 import Sidebar from "../components/Sidebar";
 import { Outlet, Navigate } from "react-router-dom";
 import { useWeb3ModalAccount } from "@web3modal/ethers/react";
-import mobileLogo from "../assets/logo.svg";
 import MobileSidebar from "../components/MobileSidebar";
 
 const DashboardLayout = () => {
